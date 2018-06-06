@@ -23,4 +23,10 @@ class Album
     @id = db_id_result[0]["id"].to_i()
   end
 
+  def self.all()
+    sql = "SELECT * FROM albums"
+    albums = SqlRunner.run(sql)
+    return albums.map {|album| Album.new(album)} #takes in hash of albums and we create objects from them.
+  end
+
 end

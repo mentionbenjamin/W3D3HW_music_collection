@@ -21,4 +21,10 @@ class Artist
     @id = db_id_result[0]["id"].to_i()
   end
 
+  def self.all()
+    sql = "SELECT * FROM artists"
+    artists = SqlRunner.run(sql)
+    return artists.map {|artist| Artist.new(artist)} #takes in hash of artist and we create objects from them.
+  end
+
 end
