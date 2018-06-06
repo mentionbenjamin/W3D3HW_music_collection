@@ -29,4 +29,11 @@ class Album
     return albums.map {|album| Album.new(album)} #takes in hash of albums and we create objects from them.
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM albums"
+    SqlRunner.run(sql)
+  end
+
+
+
 end

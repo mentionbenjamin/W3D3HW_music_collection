@@ -27,4 +27,9 @@ class Artist
     return artists.map {|artist| Artist.new(artist)} #takes in hash of artist and we create objects from them.
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
+
 end
