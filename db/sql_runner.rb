@@ -12,7 +12,8 @@ class SqlRunner
       results = db.exec_prepared('query', values)
     ensure
       db.close() if db != nil
-  end
+    end
   return results
+  end
 
 end
