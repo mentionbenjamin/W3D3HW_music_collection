@@ -17,8 +17,8 @@ class Artist
     ($1)
     RETURNING id"
     values = [@name]
-    result = SqlRunner.run(sql,values)
-    @id = result[0]["id"].to_i()
+    db_id_result = SqlRunner.run(sql,values)
+    @id = db_id_result[0]["id"].to_i()
   end
 
 end
