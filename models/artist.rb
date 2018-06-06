@@ -1,7 +1,7 @@
 require("pg")
 require_relative("../db/sql_runner.rb")
 
-class Artists
+class Artist
 
   def initialize(details)
     @id = details["id"].to_i() if details["id"]
