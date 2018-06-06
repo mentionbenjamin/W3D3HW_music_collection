@@ -41,4 +41,7 @@ class Album
     return Artist.new(artist_details[0])
   end
 
+  
+
+
 end
